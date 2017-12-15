@@ -2,9 +2,20 @@
 #setwd('~/globalwarming')
 library(zoo)
 
-## DATA READING 
+## DATA READING *** CHANGE LINES BELOW TO CREATE ALL TRANSFORMED DATA TO BE GIVEN AS INPUT-remember also to change the output- ***
 #Import the data. Consider first column as row names, also first row as column names. Also, change transform '***' characters to NA and skips 1st line that is the title
-crosstable <- read.csv(file='~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/GLB.Ts.csv', row.names=1, na.strings = c("***", NA), skip=1, header=TRUE)
+
+# data/tempAnomaliesMeteo/GLB.Ts.csv
+#crosstable <- read.csv(file='~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/GLB.Ts.csv', row.names=1, na.strings = c("***", NA), skip=1, header=TRUE)
+# data/tempAnomaliesAirSea/GLB.Ts+dSST.csv
+crosstable <- read.csv(file='~/Sites/globalwarming/climate-spirals/data/tempAnomaliesAirSea/GLB.Ts+dSST.csv', row.names=1, na.strings = c("***", NA), skip=1, header=TRUE)
+
+##TODOS (also needed changes in code)
+# data/tempAnomaliesMeteo/ZonAnn.Ts.csv
+#crosstable <- read.csv(file='~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/GLB.Ts.csv', row.names=1, na.strings = c("***", NA), skip=1, header=TRUE)
+# data/tempAnomaliesAirSea/ZonAnn.Ts+dSST.csv
+#crosstable <- read.csv(file='~/Sites/globalwarming/climate-spirals/data/tempAnomaliesAirSea/ZonAnn.Ts+dSST.csv', row.names=1, na.strings = c("***", NA), skip=1, header=TRUE)
+
 #Look at the first six rows
 head(crosstable)
 
@@ -48,8 +59,21 @@ colnames(yearfilled) <- c("year","type(J-D,D-N)","value")
 colnames(seasonsfilled) <- c("year","season(DJF,MAM,JJA,SON)","value")
 
 
-## EXPORT
+## DATA EXPORTING *** CHANGE LINES BELOW TO CREATE ALL TRANSFORMED DATA TO BE GIVEN AS OUTPUT-remember also to change the input- ***
 # Write CSV in R
-write.table(monthsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/monthlyMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
-write.table(yearfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/annualMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
-write.table(seasonsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/seasonalMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+#temperatures write in data/tempAnomaliesMeteo/
+#write.table(monthsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/monthlyMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+#write.table(yearfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/annualMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+#write.table(seasonsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesMeteo/seasonalMeanTempMeteo.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+
+#temperatures write in data/tempAnomaliesAirSea/
+write.table(monthsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesAirSea/monthlyMeanTempAirSea.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+write.table(yearfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesAirSea/annualMeanTempAirSea.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+write.table(seasonsfilled, file = '~/Sites/globalwarming/climate-spirals/data/tempAnomaliesAirSea/seasonalMeanTempAirSea.csv',row.names=FALSE, na="",col.names=TRUE, sep=",",quote=FALSE)
+
+##TODOS (also needed changes in code)
+# zonnal temperatures in data/tempAnomaliesMeteo/
+#TODO
+# zonnal temperatures in data/tempAnomaliesAirSea/
+#TODO
+

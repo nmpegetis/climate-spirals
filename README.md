@@ -1,4 +1,4 @@
-Scenario exercise for Data Scientists
+Scenario exercise for Data Scientists (Duration: 30h - weekly exercise)
 ==============
 
 A webpage base on openclimatedata/climate-spirals Github repository. Written in Javascript.
@@ -9,10 +9,74 @@ Licence: [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
 
 ### Setup for Desktop (localhost) ####
 
+##### Download latest data from GIStemp (updated once per semester)
+! Remember to install wget to your computer. e.g. for MacOS: `brew install wget --with-libressl`.
+  
+* Current version is of August, 2017
+                                                                 
+```
+./data/downloadGIStempData.sh
+```
+
+##### Setup and run
 ```
 cd globalwarming
 npm install
 nmp run dev
+```
+
+##### Serve
+After setup is ready the visualization is served in:
+```
+    Local: http://localhost:3000
+    External: http://192.168.1.3:3000
+```
+
+and particularly the new visualization in:
+* Global Mean Temperature
+```
+    Local: http://localhost:3000/temperature/
+    External: http://192.168.1.3:3000//temperature/
+```
+* Carbon Budget - Global Mean Temperature
+```
+    Local: http://localhost:3000/carbon-budget-temperature/
+    External: http://192.168.1.3:3000/carbon-budget-temperature/
+```
+* CO2 Concetration - Global Mean Temperature
+```
+    Local: http://localhost:3000/concentration-temperature/
+    External: http://192.168.1.3:3000/concentration-temperature/
+```
+* From Emissions To Global Mean Temperature
+```
+    Local: http://localhost:3000/from-emissions-to-global-warming/
+    External: http://192.168.1.3:3000/from-emissions-to-global-warming/
+```
+* Temperature Spiral
+```
+    Local: http://localhost:3000/temperature-line-chart/
+    External: http://192.168.1.3:3000/temperature-line-chart/
+```
+* Carbon Budget - Global Mean Temperature
+```
+    Local: http://localhost:3000/carbon-budget-temperature-line-chart/
+    External: http://192.168.1.3:3000/carbon-budget-temperature-line-chart/
+```
+* CO2 Concetration - Global Mean Temperature
+```
+    Local: http://localhost:3000/concentration-temperature-line-chart/
+    External: http://192.168.1.3:3000/concentration-temperature-line-chart/
+```
+* From Emissions To Global Mean Temperature
+```
+    Local: http://localhost:3000/from-emissions-to-global-warming-line-chart/
+    External: http://192.168.1.3:3000/from-emissions-to-global-warming-line-chart/
+```
+* Temperature Spiral
+```
+    Local: http://localhost:3000/temperature-line-chart/
+    External: http://192.168.1.3:3000/temperature-line-chart/
 ```
 
 
@@ -21,14 +85,14 @@ nmp run dev
 * Climate Spiral Loops 
 * Global, Northern and Southern Concetrations
 * Carbon Bubget
-* Concetration Spiral
-* Temperature Spiral `changed by the author`
-* Budget and Temperature `changed by the author`
-* Concetration and Temperature `changed by the author`
+* Concentration Spiral
+* Temperature Spiral `changed by the @author`
+* Budget and Temperature `changed by the @author`
+* Concentration and Temperature `changed by the @author`
 * Climate Spiral Loops
 * Budget and Concetration
-* From Emissions to Global Warming
-* more... `to be added by the author`
+* From Emissions to Global Warming `changed by the @author`
+* more... `to be added by the @author`
 
 #### Scenario Task #### 
 Please use any dataset provided at [https://data.giss.nasa.gov/gistemp/](https://data.giss.nasa.gov/gistemp/) to visualize, in an effective way, global warming.
@@ -49,6 +113,7 @@ Technical details:
     Year,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,J-D,D-N,DJF,MAM,JJA,SON
     1880,-.81,-.39,-.46,-.65,-.34,-.47,-.46,.09,-.49,-.66,-.50,-.53,-.47,\*\*\*,\*\*\*,-.48,-.28,-.55
     1881,-.77,-.61,-.35,-.24,-.01,-1.08,-.50,-.22,-.33,-.47,-.54,-.13,-.44,-.47,-.64,-.20,-.60,-.45
+    ...
 
     ```
     * The data given as input to the d3js should be like:
@@ -68,17 +133,20 @@ Technical details:
        1851,1,0.015171568627451004
        1851,2,-.04382843137254899
        1851,3,-.16782843137254905
-       ```
-    
+       ...
+    ```
 4. We created an R script(read, manipulate/cleanse, trasform, export) that does this job as and is provided in the directory `rscript`
+5. We also backed up the previous data files used and transformed the emissions.csv and concentrations csv files to start from 1880 instead of 1850 to be simultaneous with our new data on visualizations.
 
 ### Screenshots ###
 In the following case scenario a story of creating a user, some doctors and an admin watching is going to be presented using screenshots taken from all kind of platforms to find out that the app is also responsive 
-![alt tag](case/1.png)
+![alt tag](from-emissions-to-global-warming-line-chart.png)
 
 
 ## Future work ##
-More visualization can be produced using the rest of the data like the seasonal data. An idea on that is to calculate the range of temperature anomaly by season (or by month) and infer if there is an exact season that the temperature difference has been amplified due to the global warming and the ice melting.
+1. `TODO` More visualization can be produced using the rest of the data like the seasonal data. An idea on that is to calculate the range of temperature anomaly by season (or by month) and infer if there is an exact season that the temperature difference has been amplified due to the global warming and the ice melting.
+2. `TODO` A comparison between data gathered from Air and Sea surface with those gathered from meteorological stations.
+3. `TODO` To visualize different data now you have to switch public/temperatures.csv file content manually. Later it will be automated
 
 
 ### Helpful Links ###

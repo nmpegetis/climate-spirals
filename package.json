@@ -43,7 +43,8 @@
     "stylelint-config-standard": "^11.0.0",
     "uglify-js": "^2.6.2",
     "watch": "^0.19.1",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "md5sum": "^0.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

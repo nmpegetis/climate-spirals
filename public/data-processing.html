@@ -811,7 +811,7 @@ DOI: 10.3334/CDIAC/00001_V2016
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">bunkers</span> <span class="o">=</span> <span class="n">cdiac</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1850</span><span class="p">:</span><span class="mi">2013</span><span class="p">]</span> <span class="o">*</span> <span class="mf">3.667</span> <span class="o">/</span> <span class="mi">1000000</span> <span class="c1"># from kt C to Gt CO2</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">bunkers</span> <span class="o">=</span> <span class="n">cdiac</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1880</span><span class="p">:</span><span class="mi">2013</span><span class="p">]</span> <span class="o">*</span> <span class="mf">3.667</span> <span class="o">/</span> <span class="mi">1000000</span> <span class="c1"># from kt C to Gt CO2</span>
 <span class="n">bunkers</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bunkers&quot;</span><span class="p">]</span>
 <span class="n">bunkers</span> <span class="o">=</span> <span class="n">bunkers</span><span class="o">.</span><span class="n">Bunkers</span>
 <span class="n">bunkers</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -2954,7 +2954,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
 
 
 </code></pre>
-<p>Cumulative emissions 1850 - 1869 (PRIMAP-hist): 46.66 GtCO2</p>
+<p>Cumulative emissions 1880 - 1869 (PRIMAP-hist): 46.66 GtCO2</p>
 
 </div>
 </div>
@@ -2964,7 +2964,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Historical 1850-2010 emissions for PRIMAP-hist plus CDIAC bunkers are ~90 Gt higher than the 1900 Gt from the RCP-based budgets.</p>
+<p>Historical 1880-2010 emissions for PRIMAP-hist plus CDIAC bunkers are ~90 Gt higher than the 1900 Gt from the RCP-based budgets.</p>
 
 </div>
 </div>
@@ -2974,7 +2974,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">total</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1850</span><span class="p">:</span><span class="mi">1869</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">total</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1880</span><span class="p">:</span><span class="mi">1869</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -3003,7 +3003,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">total</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1850</span><span class="p">:</span><span class="mi">2010</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">total</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1880</span><span class="p">:</span><span class="mi">2010</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -3046,7 +3046,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
     <span class="s2">&quot;mole_fraction_of_carbon_dioxide_in_air_input4MIPs_GHGConcentrations_CMIP_UoM-CMIP-1-1-0_gr3-GMNHSH_000001-201412.csv&quot;</span><span class="p">,</span>
     <span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">]</span>
 <span class="p">)</span>
-<span class="n">cmip6</span> <span class="o">=</span> <span class="n">cmip6</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1850</span><span class="p">:]</span>
+<span class="n">cmip6</span> <span class="o">=</span> <span class="n">cmip6</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1880</span><span class="p">:]</span>
 <span class="n">cmip6</span> <span class="o">=</span> <span class="n">cmip6</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;datenum&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">cmip6</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -3082,7 +3082,7 @@ iIiIxCQFWRERERGJSQqyIiIiIhKTFGRFREREJCYpyIqIiIhITFKQFREREZGYpCArIiIiIjHp/wG5
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">1850</th>
+      <th rowspan="5" valign="top">1880</th>
       <th>1</th>
       <td>284.944656</td>
       <td>285.629154</td>
@@ -5254,7 +5254,7 @@ QmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Global-Temperatures">Global Temperatures<a class="anchor-link" href="#Global-Temperatures">&#182;</a></h2><p>Global temperature data is taken from the HadCRUT4 near surface temperature dataset.</p>
+<h2 id="Global-Temperatures">Global Temperatures<a class="anchor-link" href="#Global-Temperatures">&#182;</a></h2><p>Global temperature data is taken from the NASA GIStemp Combined Land-Surface Air and Sea-Surface Water Temperature Anomaliestemperature dataset.</p>
 <p><a href="http://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/download.html">http://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/download.html</a></p>
 
 </div>
@@ -5280,11 +5280,11 @@ QmCC
 
 <span class="n">hadcrut</span> <span class="o">=</span> <span class="n">hadcrut</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">])</span>
 
-<span class="n">hadcrut</span> <span class="o">-=</span> <span class="n">hadcrut</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1850</span><span class="p">:</span><span class="mi">1900</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">hadcrut</span> <span class="o">-=</span> <span class="n">hadcrut</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1880</span><span class="p">:</span><span class="mi">1900</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">hadcrut</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">hadcrut</span> <span class="o">=</span> <span class="n">hadcrut</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">u&quot;Temperature anomalies (°C) (1850-1990 mean)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">u&quot;Temperature anomalies (°C) (1880-1990 mean)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 

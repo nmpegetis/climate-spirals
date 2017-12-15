@@ -19,8 +19,8 @@ module.exports = function radialChart() {
   // Cumulative CO2 emissions from 2011 (Fractions of simulations: 66%)
   // <2   1000 GtCO2
   // <1.5  400 GtCO2
-  // PRIMAP-hist cumulative emissions 1850 - 1869: 47 Gt
-  // PRIMAP-hist + bunkers 1850 - 2010: 1990 Gt
+  // PRIMAP-hist cumulative emissions 1880 - 1869: 47 Gt
+  // PRIMAP-hist + bunkers 1880 - 2010: 1990 Gt
   // Total Budget 3000 Gt
 
   var scaleCumulativeEmissions = d3.scaleLinear()

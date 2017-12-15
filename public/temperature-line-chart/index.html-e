@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width">
-<title>{{ title }}</title>
+<title>Temperature Spiral with Line Chart</title>
 <link rel="stylesheet" href="../normalize.css">
 <link rel="stylesheet" href="../climate-spirals.css">
 <body>
@@ -55,7 +55,19 @@
 </span>
 <div id="viz">
 
-{% block viz %}{% endblock %}
+
+<div class="col">
+<h2>Global Mean Temperature</h2>
+<div id="temperature-spiral"></div>
+<h3>Global Mean Temperature in °C relative to 1880 - 1900 average</h3>
+<div id="temperature-linear" class="chart-linear"></div>
+<div class="sources">
+Data source:<br>
+<a href="https://data.giss.nasa.gov/gistemp/">NASA GIStemp Combined Land-Surface Air and Sea-Surface Water Temperature Anomalies temperature dataset</a>
+</div>
+</div>
+
+
 
 </div>
 
