@@ -139,7 +139,6 @@ Technical details:
 5. We also backed up the previous data files used and transformed the emissions.csv and concentrations csv files to start from 1880 instead of 1850 to be simultaneous with our new data on visualizations.
 
 ### Screenshots ###
-In the following case scenario a story of creating a user, some doctors and an admin watching is going to be presented using screenshots taken from all kind of platforms to find out that the app is also responsive 
 ![alt tag](from-emissions-to-global-warming-line-chart.png)
 
 
