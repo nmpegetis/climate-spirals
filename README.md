@@ -18,18 +18,17 @@ nmp run dev
 
 ### What's included ###
 #### Visualizations ####
-* Climate Spiral Loops `added in this repository by author`
 * Climate Spiral Loops 
 * Global, Northern and Southern Concetrations
 * Carbon Bubget
 * Concetration Spiral
-* Temperature Spiral
-* Budget and Temperature
-* Concetration and Temperature
+* Temperature Spiral `changed by the author`
+* Budget and Temperature `changed by the author`
+* Concetration and Temperature `changed by the author`
 * Climate Spiral Loops
 * Budget and Concetration
 * From Emissions to Global Warming
-
+* more... `to be added by the author`
 
 #### Scenario Task #### 
 Please use any dataset provided at [https://data.giss.nasa.gov/gistemp/](https://data.giss.nasa.gov/gistemp/) to visualize, in an effective way, global warming.
